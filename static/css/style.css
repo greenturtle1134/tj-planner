@@ -30,8 +30,12 @@
     height: 100%;
 }
 
-.course--semester:not(:only-of-type) {
-    height: 50%
+.course--semester {
+    height: 50%;
+}
+
+.course--semester:only-of-type {
+    margin-bottom: calc(25% + 4px);
 }
 
 td.grid__box > .course--semester:nth-last-of-type(2) {
@@ -40,16 +44,6 @@ td.grid__box > .course--semester:nth-last-of-type(2) {
 
 td.grid__box > .course--semester:nth-of-type(2) {
     margin-top: -1px;
-}
-
-/* TODO: These really shouldn't have to be marked as important, and as soon as I figure out why precedence isn't working I'll fix it. */
-
-td.grid__box > .course--semester.course--ap:nth-last-of-type(2), .course--semester.course--post-ap:nth-last-of-type(2) {
-    margin-bottom: -2px !important;
-}
-
-td.grid__box > .course--semester.course--ap:nth-of-type(2), .course--semester.course--post-ap:nth-of-type(2) {
-    margin-top: -2px !important;
 }
 
 .course--ap {
